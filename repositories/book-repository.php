@@ -42,6 +42,11 @@ $books = [
     "authors" => ["Pramoedya Ananta Toer", "Sapardi Djoko Damono"],
   ],
 ];
+function getBooks()
+{
+  global $books;
+  return $books;
+}
 
 $book = [
   "id" => 5,
@@ -53,3 +58,9 @@ $book = [
   "description" => "Kumpulan puisi dan cerita pendek dari berbagai penulis Nusantara.",
   "authors" => ["Pramoedya Ananta Toer", "Sapardi Djoko Damono"],
 ];
+
+function getBook()
+{
+  global $book;
+  return $book;
+}
