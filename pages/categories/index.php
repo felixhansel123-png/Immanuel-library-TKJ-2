@@ -14,19 +14,6 @@
 
 
     <main class="app-main">
-    <header class="app-topbar">
-      <div class="page-title">
-        <h1>Manajemen Kategori</h1>
-        <p>Kelola kategori untuk mengelompokkan buku</p>
-      </div>
-      <div class="topbar-user">
-        <span class="avatar">BS</span>
-        <div>
-          Budi Santoso<br>
-          <span class="badge badge-member" style="margin-top:2px;">Member</span>
-        </div>
-      </div>
-    </header>
 
       <div class="app-content">
         <div class="toolbar">
