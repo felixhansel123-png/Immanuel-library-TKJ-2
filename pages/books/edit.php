@@ -29,7 +29,7 @@
       ?>
 
       <div class="app-content">
-        <form method="" action="">
+        <form method="post" action="../../actions/books/update.php">
           <input type="hidden" name="id" value="<?= $book['id'] ?>">
           <div class="form-card" style="margin-bottom:20px;">
             <div class="form-section-title">Data Buku</div>
@@ -55,8 +55,8 @@
               <div class="form-group">
                 <label for="category_id">Kategori</label>
                 <select id="category_id" name="category_id">
-                  <?php foreach ($categories as $index => $category): ?>
-                    <option value="<?= $index + 1 ?>" <?= ($index + 1) === $book['category_id'] ? 'selected' : '' ?>>
+                  <?php foreach ($categories as $category): ?>
+                    <option value="<?= $category ?>" <?= $category === $book['category'] ? 'selected' : '' ?>>
                       <?= $category ?>
                     </option>
                   <?php endforeach; ?>
@@ -74,11 +74,10 @@
             <div class="form-group">
               <label>Pilih Penulis (bisa lebih dari satu)</label>
               <div class="checkbox-grid">
-                <?php foreach ($authors as $index => $authorName): ?>
-                  <?php $authorId = $index + 1; ?>
+                <?php foreach ($authors as $author): ?>
                   <label class="checkbox-item">
-                    <input type="checkbox" name="author_ids[]" value="<?= $authorId ?>" <?= in_array($authorId, $book['author_ids']) ? 'checked' : '' ?>>
-                    <?= $authorName ?>
+                    <input type="checkbox" name="authors[]" value="<?= $author ?>" <?= in_array($author, $book['authors']) ? 'checked' : '' ?>>
+                    <?= $author ?>
                   </label>
                 <?php endforeach; ?>
               </div>

@@ -7,7 +7,7 @@ $year = $_POST['year'];
 $stock = $_POST['stock'];
 $category_id = $_POST['category_id'];
 $description = $_POST['description'];
-$author_ids = $_POST['author_ids'];
+$authors = $_POST['authors'];
 
 echo "<h1>Data Buku Berhasil Diupdate</h1>";
 
@@ -19,6 +19,5 @@ print_r([
     "stock" => $stock,
     "category_id" => $category_id,
     "description" => $description,
-    "author_ids" => $author_ids
+    "authors" => $authors
 ]);
-?>
