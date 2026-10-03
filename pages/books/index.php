@@ -20,15 +20,15 @@
   ];
   ?>
   <div class="app-shell">
-  <?php require '../../components/admin/sidebar.php'; ?>
-  
-    <main class="app-main">
-    <?php
-    $pageTitle = "Manajemen Buku";
-    $pageSubtitle = "Kelola data buku, kategori, dan penulis";
+    <?php require '../../components/admin/sidebar.php'; ?>
 
-    require '../../components/admin/topbar.php';
-    ?>
+    <main class="app-main">
+      <?php
+      $pageTitle = "Manajemen Buku";
+      $pageSubtitle = "Kelola data buku, kategori, dan penulis";
+
+      require '../../components/admin/topbar.php';
+      ?>
 
       <div class="app-content">
         <div class="toolbar">
@@ -86,7 +86,8 @@
                 <td>
                   <div class="cell-actions">
                     <a href="edit.php?id=<?= $book['id'] ?>" class="btn btn-outline btn-sm">Edit</a>
-                    <a href="#" class="btn btn-danger btn-sm">Hapus</a>
+                    <a href="../../actions/books/destroy.php?id=<?= $book['id'] ?>" class="btn btn-danger btn-sm"
+                      onclick="return confirm('Apakah Anda yakin ingin menghapus buku ini?')">Hapus</a>
                   </div>
                 </td>
               </tr>
@@ -94,7 +95,7 @@
           </table>
         </div>
 
-        <div class="pagination">
+        <div class=" pagination">
           <span class="pagination-btn is-disabled">&lt;</span>
           <span class="pagination-btn is-disabled">&gt;</span>
         </div>
