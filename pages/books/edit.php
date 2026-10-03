@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edit Buku - Perpustakaan Digital</title>
   <link rel="stylesheet" href="../../styles/books/edit.css">
 </head>
+
 <body>
   <?php
+  require_once __DIR__ . "/../../repositories/book-repository.php";
+
   $categories = ["Fiksi", "Sains", "Sejarah", "Teknologi"];
   $authors = ["Andrea Hirata", "Tere Liye", "J.K. Rowling", "Pramoedya Ananta Toer", "Sapardi Djoko Damono"];
 
-  $book = [
-      "id" => 5, "title" => "Antologi Rasa Nusantara", "isbn" => "978-602-1234-56-7",
-      "year" => 2021, "stock" => 4, "category_id" => 1,
-      "description" => "Kumpulan puisi dan cerita pendek dari berbagai penulis Nusantara.",
-      "author_ids" => [4, 5],
-  ];
+  $book = getBook();
   ?>
   <div class="app-shell">
-  <?php require '../../components/admin/sidebar.php'; ?>
+    <?php require '../../components/admin/sidebar.php'; ?>
 
     <main class="app-main">
-    <?php
-    $pageTitle = "Edit Buku";
-    $pageSubtitle = "Perbarui data buku, kategori, dan penulis";
+      <?php
+      $pageTitle = "Edit Buku";
+      $pageSubtitle = "Perbarui data buku, kategori, dan penulis";
 
-    require '../../components/admin/topbar.php';
-    ?>
+      require '../../components/admin/topbar.php';
+      ?>
 
       <div class="app-content">
         <form method="" action="">
@@ -57,7 +56,9 @@
                 <label for="category_id">Kategori</label>
                 <select id="category_id" name="category_id">
                   <?php foreach ($categories as $index => $category): ?>
-                    <option value="<?= $index + 1 ?>" <?= ($index + 1) === $book['category_id'] ? 'selected' : '' ?>><?= $category ?></option>
+                    <option value="<?= $index + 1 ?>" <?= ($index + 1) === $book['category_id'] ? 'selected' : '' ?>>
+                      <?= $category ?>
+                    </option>
                   <?php endforeach; ?>
                 </select>
               </div>
@@ -93,4 +94,5 @@
     </main>
   </div>
 </body>
+
 </html>
