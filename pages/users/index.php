@@ -11,10 +11,15 @@
   $user = ["id" => 2, "name" => "Budi Santoso", "email" => "budi.santoso@siswa.ski.sch.id", "role" => "member"];
   ?>
   <div class="app-shell">
-
+  <?php require '../../components/admin/sidebar.php'; ?>
 
     <main class="app-main">
+    <?php
+    $pageTitle = "Manajemen Pengguna";
+    $pageSubtitle = "Daftar seluruh pengguna beserta perannya (role)";
 
+    require '../../components/admin/topbar.php';
+    ?>
       <div class="app-content">
         <div class="toolbar">
           <form method="" action="" class="toolbar-filters">

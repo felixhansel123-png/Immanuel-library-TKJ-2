@@ -11,10 +11,15 @@
   $category = ["id" => 1, "name" => "Fiksi", "description" => "Novel dan cerita rekaan", "total_books" => 3];
   ?>
   <div class="app-shell">
-
+  <?php require '../../components/admin/sidebar.php'; ?>
 
     <main class="app-main">
+    <?php
+    $pageTitle = "Manajemen Kategori";
+    $pageSubtitle = "Kelola kategori untuk mengelompokkan buku";
 
+    require '../../components/admin/topbar.php';
+    ?>
       <div class="app-content">
         <div class="toolbar">
           <form method="" action="" class="toolbar-filters">

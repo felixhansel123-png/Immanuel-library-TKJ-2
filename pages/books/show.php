@@ -11,10 +11,15 @@
   require '../../repositories/book-repository.php';
   ?>
   <div class="app-shell">
- 
+  <?php require '../../components/admin/sidebar.php'; ?>
 
     <main class="app-main">
+    <?php
+    $pageTitle = "Detail Buku";
+    $pageSubtitle = "Informasi lengkap buku beserta kategori dan penulis";
 
+    require '../../components/admin/topbar.php';
+    ?>
 
       <div class="app-content">
         <div class="detail-grid">

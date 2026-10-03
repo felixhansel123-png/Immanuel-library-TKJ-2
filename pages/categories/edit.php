@@ -15,11 +15,15 @@
   ];
   ?>
   <div class="app-shell">
-
+  <?php require '../../components/admin/sidebar.php'; ?>
 
     <main class="app-main">
+    <?php
+    $pageTitle = "Edit Kategori";
+    $pageSubtitle = "Perbarui data kategori";
 
-
+    require '../../components/admin/topbar.php';
+    ?>
       <div class="app-content">
         <form method="" action="">
           <input type="hidden" name="id" value="<?= $category['id'] ?>">

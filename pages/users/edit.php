@@ -16,11 +16,15 @@
   ];
   ?>
   <div class="app-shell">
-
+  <?php require '../../components/admin/sidebar.php'; ?>
 
     <main class="app-main">
+    <?php
+    $pageTitle = "Edit Pengguna";
+    $pageSubtitle = "Perbarui data dan role pengguna";
 
-
+    require '../../components/admin/topbar.php';
+    ?>
       <div class="app-content">
         <form method="" action="">
           <input type="hidden" name="id" value="<?= $user['id'] ?>">

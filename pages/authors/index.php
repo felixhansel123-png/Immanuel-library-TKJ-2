@@ -11,11 +11,15 @@
   $author = ["id" => 1, "name" => "Andrea Hirata", "total_books" => 1];
   ?>
   <div class="app-shell">
-
+  <?php require '../../components/admin/sidebar.php'; ?>
 
     <main class="app-main">
+    <?php
+    $pageTitle = "Manajemen Penulis";
+    $pageSubtitle = "Kelola data penulis yang terdaftar di sistem";
 
-
+    require '../../components/admin/topbar.php';
+    ?>
       <div class="app-content">
         <div class="toolbar">
           <form method="" action="" class="toolbar-filters">

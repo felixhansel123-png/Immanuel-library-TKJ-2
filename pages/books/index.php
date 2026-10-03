@@ -20,10 +20,15 @@
   ];
   ?>
   <div class="app-shell">
-  
+  <?php require '../../components/admin/sidebar.php'; ?>
   
     <main class="app-main">
+    <?php
+    $pageTitle = "Manajemen Buku";
+    $pageSubtitle = "Kelola data buku, kategori, dan penulis";
 
+    require '../../components/admin/topbar.php';
+    ?>
 
       <div class="app-content">
         <div class="toolbar">

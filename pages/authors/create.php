@@ -8,11 +8,15 @@
 </head>
 <body>
   <div class="app-shell">
-
+  <?php require '../../components/admin/sidebar.php'; ?>  
 
     <main class="app-main">
+    <?php
+    $pageTitle = "Tambah Penulis";
+    $pageSubtitle = "Daftarkan penulis baru ke sistem";
 
-
+    require '../../components/admin/topbar.php';
+    ?>
       <div class="app-content">
         <form method="" action="">
           <div class="form-card">

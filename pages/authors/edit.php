@@ -17,11 +17,15 @@
   ];
   ?>
   <div class="app-shell">
-  
+  <?php require '../../components/admin/sidebar.php'; ?>
 
     <main class="app-main">
+    <?php
+    $pageTitle = "Edit Penulis";
+    $pageSubtitle = "Perbarui data penulis";
 
-
+    require '../../components/admin/topbar.php';
+    ?>
       <div class="app-content">
         <form method="" action="">
           <input type="hidden" name="id" value="<?= $author['id'] ?>">

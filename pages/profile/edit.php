@@ -23,11 +23,15 @@
   ];
   ?>
   <div class="app-shell">
-
+  <?php require '../../components/admin/sidebar.php'; ?>
 
     <main class="app-main">
+    <?php
+    $pageTitle = "Profil Saya";
+    $pageSubtitle = "Kelola data akun dan profil Anda";
 
-
+    require '../../components/admin/topbar.php';
+    ?>
       <div class="app-content">
         <form method="" action="">
           <div class="form-card" style="margin-bottom:20px;">
