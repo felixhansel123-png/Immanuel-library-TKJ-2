@@ -10,24 +10,24 @@
 
 <body>
   <?php
-  $author = [
-    "id" => 1,
-    "name" => "Andrea Hirata",
-    "bio" => "Penulis asal Belitung, dikenal lewat novel Laskar Pelangi.",
-  ];
+
+  require_once __DIR__ . "/../../repositories/author-repository.php";
+
+  $author = getAuthor();
+  $author['bio'] = "Penulis novel dan sastrawan Indonesia.";
   ?>
   <div class="app-shell">
-  <?php require '../../components/admin/sidebar.php'; ?>
+    <?php require '../../components/admin/sidebar.php'; ?>
 
     <main class="app-main">
-    <?php
-    $pageTitle = "Edit Penulis";
-    $pageSubtitle = "Perbarui data penulis";
+      <?php
+      $pageTitle = "Edit Penulis";
+      $pageSubtitle = "Perbarui data penulis";
 
-    require '../../components/admin/topbar.php';
-    ?>
+      require '../../components/admin/topbar.php';
+      ?>
       <div class="app-content">
-        <form method="" action="">
+        <form method="post" action="../../actions/authors/update.php">
           <input type="hidden" name="id" value="<?= $author['id'] ?>">
           <div class="form-card">
             <div class="form-section-title">Data Penulis</div>
