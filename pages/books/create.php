@@ -55,7 +55,7 @@
                 <label for="category_id">Kategori</label>
                 <select id="category_id" name="category_id">
                   <?php foreach ($categories as $index => $category): ?>
-                    <option value="<?= $index + 1 ?>"><?= $category ?></option>
+                    <option value="<?= $category['id'] ?>"><?= $category['name'] ?></option>
                   <?php endforeach; ?>
                 </select>
               </div>
@@ -73,8 +73,8 @@
               <div class="checkbox-grid">
                 <?php foreach ($authors as $index => $authorName): ?>
                   <label class="checkbox-item">
-                    <input type="checkbox" name="author_ids[]" value="<?= $index + 1 ?>">
-                    <?= $authorName ?>
+                    <input type="checkbox" name="author_ids[]" value="<?= $authorName['id'] ?>">
+                    <?= $authorName['name'] ?>
                   </label>
                 <?php endforeach; ?>
               </div>
