@@ -1,0 +1,6 @@
+<a href="../../actions/books/destroy.php?id=<?= $book['id'] ?>" class="btn btn-danger btn-sm"
+onclick="return confirm('Apakah Anda yakin ingin menghapus buku ini?')">Hapus</a>
+
+# untuk ini kemarin izin sebagai bagian yang tergabung dalam bagian commit 3 file edit,hapus,create, ini seharusnya ikut sesuai langkah word
+# namun tidak sengaja tergabung dalam commit 3 filenya, seharusnya di buat bersamaan dengan buat 3 file actions untuk commit bersama keseluruhan.
+# untuk sisanya susah dii commit sesuai arahan langkah langkah di word 
