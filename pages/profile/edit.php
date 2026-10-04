@@ -1,39 +1,32 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profil Saya - Perpustakaan Digital</title>
   <link rel="stylesheet" href="../../styles/profile/edit.css">
 </head>
+
 <body>
   <?php
-  $user = [
-      "id"    => 1,
-      "name"  => "Budi Santoso",
-      "email" => "budi.santoso@siswa.ski.sch.id",
-      "role"  => "member",
-  ];
+  require_once __DIR__ . "/../../repositories/user-repository.php";
 
-  $profile = [
-      "user_id" => 1,
-      "phone"   => "0812-3456-7890",
-      "address" => "Jl. Merdeka No. 21, Pontianak, Kalimantan Barat",
-      "bio"     => "Murid kelas XI TKJ yang gemar membaca novel fiksi dan buku pengembangan diri.",
-  ];
+  $user = getUser();
+  $profile = getProfile();
   ?>
   <div class="app-shell">
-  <?php require '../../components/admin/sidebar.php'; ?>
+    <?php require '../../components/admin/sidebar.php'; ?>
 
     <main class="app-main">
-    <?php
-    $pageTitle = "Profil Saya";
-    $pageSubtitle = "Kelola data akun dan profil Anda";
+      <?php
+      $pageTitle = "Profil Saya";
+      $pageSubtitle = "Kelola data akun dan profil Anda";
 
-    require '../../components/admin/topbar.php';
-    ?>
+      require '../../components/admin/topbar.php';
+      ?>
       <div class="app-content">
-        <form method="" action="">
+        <form method="post" action="../../actions/profile/update.php">
           <div class="form-card" style="margin-bottom:20px;">
             <div class="form-section-title">Data Akun</div>
             <div class="form-row">
@@ -77,4 +70,5 @@
     </main>
   </div>
 </body>
+
 </html>
