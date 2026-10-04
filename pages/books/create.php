@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tambah Buku - Perpustakaan Digital</title>
   <link rel="stylesheet" href="../../styles/books/create.css">
 </head>
+
 <body>
   <?php
   // Data kategori & penulis dummy untuk mengisi dropdown/checkbox di form
@@ -13,18 +15,18 @@
   $authors = ["Andrea Hirata", "Tere Liye", "J.K. Rowling", "Pramoedya Ananta Toer", "Sapardi Djoko Damono"];
   ?>
   <div class="app-shell">
-  <?php require '../../components/admin/sidebar.php'; ?>
+    <?php require '../../components/admin/sidebar.php'; ?>
 
     <main class="app-main">
-    <?php
-    $pageTitle = "Tambah Buku";
-    $pageSubtitle = "Lengkapi data buku, kategori, dan penulis";
+      <?php
+      $pageTitle = "Tambah Buku";
+      $pageSubtitle = "Lengkapi data buku, kategori, dan penulis";
 
-    require '../../components/admin/topbar.php';
-    ?>
+      require '../../components/admin/topbar.php';
+      ?>
 
       <div class="app-content">
-        <form method="" action="">
+        <form method="GET" action="../../actions/books/store.php">
           <div class="form-card" style="margin-bottom:20px;">
             <div class="form-section-title">Data Buku</div>
             <div class="form-group">
@@ -85,4 +87,5 @@
     </main>
   </div>
 </body>
+
 </html>
