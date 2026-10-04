@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tambah Kategori - Perpustakaan Digital</title>
   <link rel="stylesheet" href="../../styles/categories/create.css">
 </head>
+
 <body>
   <div class="app-shell">
-  <?php require '../../components/admin/sidebar.php'; ?>
+    <?php require '../../components/admin/sidebar.php'; ?>
 
     <main class="app-main">
-    <?php
-    $pageTitle = "Tambah Kategori";
-    $pageSubtitle = "Buat kategori baru untuk mengelompokkan buku";
+      <?php
+      $pageTitle = "Tambah Kategori";
+      $pageSubtitle = "Buat kategori baru untuk mengelompokkan buku";
 
-    require '../../components/admin/topbar.php';
-    ?>
+      require '../../components/admin/topbar.php';
+      ?>
       <div class="app-content">
-        <form method="" action="">
+        <form method="post" action="../../actions/categories/store.php">
           <div class="form-card">
             <div class="form-section-title">Data Kategori</div>
             <div class="form-group">
@@ -27,7 +29,8 @@
             </div>
             <div class="form-group">
               <label for="description">Deskripsi</label>
-              <textarea id="description" name="description" rows="3" placeholder="Deskripsi singkat kategori"></textarea>
+              <textarea id="description" name="description" rows="3"
+                placeholder="Deskripsi singkat kategori"></textarea>
             </div>
 
             <div class="form-actions">
@@ -40,4 +43,5 @@
     </main>
   </div>
 </body>
+
 </html>
