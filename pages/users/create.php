@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tambah Pengguna - Perpustakaan Digital</title>
   <link rel="stylesheet" href="../../styles/users/create.css">
 </head>
+
 <body>
   <div class="app-shell">
-  <?php require '../../components/admin/sidebar.php'; ?>
+    <?php require '../../components/admin/sidebar.php'; ?>
     <main class="app-main">
-    <?php
-    $pageTitle = "Tambah Pengguna";
-    $pageSubtitle = "Buat akun pengguna baru beserta perannya";
+      <?php
+      $pageTitle = "Tambah Pengguna";
+      $pageSubtitle = "Buat akun pengguna baru beserta perannya";
 
-    require '../../components/admin/topbar.php';
-    ?>
+      require '../../components/admin/topbar.php';
+      ?>
       <div class="app-content">
-        <form method="" action="">
+        <form method="post" action="../../actions/users/store.php">
           <div class="form-card">
             <div class="form-section-title">Data Pengguna</div>
             <div class="form-row">
@@ -54,4 +56,5 @@
     </main>
   </div>
 </body>
+
 </html>

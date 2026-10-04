@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edit Pengguna - Perpustakaan Digital</title>
   <link rel="stylesheet" href="../../styles/users/edit.css">
 </head>
+
 <body>
   <?php
-  $user = [
-      "id"    => 2,
-      "name"  => "Budi Santoso",
-      "email" => "budi.santoso@siswa.ski.sch.id",
-      "role"  => "member",
-  ];
+  require_once __DIR__ . "/../../repositories/user-repository.php";
+  $user = getUser();
   ?>
   <div class="app-shell">
-  <?php require '../../components/admin/sidebar.php'; ?>
+    <?php require '../../components/admin/sidebar.php'; ?>
 
     <main class="app-main">
-    <?php
-    $pageTitle = "Edit Pengguna";
-    $pageSubtitle = "Perbarui data dan role pengguna";
+      <?php
+      $pageTitle = "Edit Pengguna";
+      $pageSubtitle = "Perbarui data dan role pengguna";
 
-    require '../../components/admin/topbar.php';
-    ?>
+      require '../../components/admin/topbar.php';
+      ?>
       <div class="app-content">
-        <form method="" action="">
+        <form method="post" action="../../actions/users/update.php">
           <input type="hidden" name="id" value="<?= $user['id'] ?>">
           <div class="form-card">
             <div class="form-section-title">Data Pengguna</div>
@@ -58,4 +56,5 @@
     </main>
   </div>
 </body>
+
 </html>
