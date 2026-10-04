@@ -57,8 +57,8 @@
                 <label for="category_id">Kategori</label>
                 <select id="category_id" name="category_id">
                   <?php foreach ($categories as $category): ?>
-                    <option value="<?= $category ?>" <?= $category === $book['category'] ? 'selected' : '' ?>>
-                      <?= $category ?>
+                    <option value="<?= $category['id'] ?>" <?= $category['name'] === $book['category'] ? 'selected' : '' ?>>
+                      <?= $category['name'] ?>
                     </option>
                   <?php endforeach; ?>
                 </select>
@@ -77,8 +77,8 @@
               <div class="checkbox-grid">
                 <?php foreach ($authors as $author): ?>
                   <label class="checkbox-item">
-                    <input type="checkbox" name="authors[]" value="<?= $author ?>" <?= in_array($author, $book['authors']) ? 'checked' : '' ?>>
-                    <?= $author ?>
+                    <input type="checkbox" name="authors[]" value="<?= $author['name'] ?>" <?= in_array($author['name'], $book['authors']) ? 'checked' : '' ?>>
+                    <?= $author['name'] ?>
                   </label>
                 <?php endforeach; ?>
               </div>
