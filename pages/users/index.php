@@ -11,7 +11,7 @@
 <body>
   <?php
   require_once __DIR__ . "/../../repositories/user-repository.php";
-  $user = getUsers();
+  $users = getUsers();
   ?>
   <div class="app-shell">
     <?php require '../../components/admin/sidebar.php'; ?>
