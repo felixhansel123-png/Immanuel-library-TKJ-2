@@ -11,8 +11,11 @@
 <body>
   <?php
   // Data kategori & penulis dummy untuk mengisi dropdown/checkbox di form
-  $categories = ["Fiksi", "Sains", "Sejarah", "Teknologi"];
-  $authors = ["Andrea Hirata", "Tere Liye", "J.K. Rowling", "Pramoedya Ananta Toer", "Sapardi Djoko Damono"];
+  require_once __DIR__ . "/../../repositories/category-repository.php";
+  require_once __DIR__ . "/../../repositories/author-repository.php";
+
+  $categories = getCategories();
+  $authors = getAuthors();
   ?>
   <div class="app-shell">
     <?php require '../../components/admin/sidebar.php'; ?>

@@ -11,10 +11,11 @@
 <body>
   <?php
   require_once __DIR__ . "/../../repositories/book-repository.php";
+  require_once __DIR__ . "/../../repositories/category-repository.php";
+  require_once __DIR__ . "/../../repositories/author-repository.php";
 
-  $categories = ["Fiksi", "Sains", "Sejarah", "Teknologi"];
-  $authors = ["Andrea Hirata", "Tere Liye", "J.K. Rowling", "Pramoedya Ananta Toer", "Sapardi Djoko Damono"];
-
+  $categories = getCategories();
+  $authors = getAuthors();
   $book = getBook();
   ?>
   <div class="app-shell">
