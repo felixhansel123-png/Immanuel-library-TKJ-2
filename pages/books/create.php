@@ -29,7 +29,7 @@
       ?>
 
       <div class="app-content">
-        <form method="GET" action="../../actions/books/store.php">
+        <form method="post" action="../../actions/books/store.php">
           <div class="form-card" style="margin-bottom:20px;">
             <div class="form-section-title">Data Buku</div>
             <div class="form-group">
