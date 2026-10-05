@@ -10,11 +10,9 @@
 
 <body>
   <?php
-
   require_once __DIR__ . "/../../repositories/author-repository.php";
 
   $author = getAuthor();
-  $author['bio'] = "Penulis novel dan sastrawan Indonesia.";
   ?>
   <div class="app-shell">
     <?php require '../../components/admin/sidebar.php'; ?>
