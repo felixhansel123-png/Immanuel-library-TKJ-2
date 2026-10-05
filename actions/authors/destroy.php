@@ -1,8 +1,9 @@
 <?php
-if (isset($_GET['id'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
     $id = $_GET['id'];
 
     echo "<h1>Penulis dengan ID {$id} berhasil dihapus</h1>";
 } else {
-    echo '<h1>ID penulis tidak ditemukan</h1>';
+    echo '<h1>Permintaan tidak valid</h1>';
 }
+?>
