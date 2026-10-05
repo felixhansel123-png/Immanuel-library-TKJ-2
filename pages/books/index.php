@@ -58,7 +58,8 @@
                 <th>Aksi</th>
               </tr>
             </thead>
-            <tbody <?php foreach ($books as $book): ?>>
+            <tbody>
+              <?php foreach ($books as $book): ?>
                 <tr>
                   <td>
                     <div class="cell-primary">
